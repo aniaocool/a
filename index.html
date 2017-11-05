@@ -19,11 +19,19 @@
 			img{
 				pointer-events: none;
 			}
-			.wrap img,.wrap a{
+			.wrap a{
+			    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				-webkit-user-select: none;
-			    -moz-user-select: none;
-			    -ms-user-select: none;
+				-moz-user-focus: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
 			    user-select: none;
+			}
+			.wrap a,.wrap a:hover,.wrap a:active,.wrap a:visited,.wrap a:link,.wrap a:focus{
+				-webkit-tap-highlight-color:rgba(0,0,0,0);
+			    -webkit-tap-highlight-color: transparent;
+			    outline:none;
+			    text-decoration: none;
 			}
 			.bg1 a,.bg2 a,.bg3 a,.bg4 a,.bg5 a,.bg6 a,.bg7 a{
 				position: absolute;
