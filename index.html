@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, target-densitydpi=device-dpi" />
+		<title>学历</title>
+		<script type="text/javascript" src="http://img.thea.cn/public/js/thea.debug.js"></script>
+		<script type="text/javascript" src="http://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>
+		<style type="text/css">
+			html,body{
+				width: 100%;
+				margin: 0;
+			}
+			.wrap{
+				width: 100%;
+				height: auto;
+				position: relative;
+			}
+			.bg1 a,.bg2 a,.bg3 a,.bg4 a,.bg5 a,.bg6 a,.bg7 a{
+				position: absolute;
+			}
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			    color: #E5E5E5; opacity:1; 
+			}
+			
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+			    color: #E5E5E5;opacity:1;
+			}
+			
+			input:-ms-input-placeholder{
+			    color: #E5E5E5;opacity:1;
+			}
+			
+			input::-webkit-input-placeholder{
+			    color: #E5E5E5;opacity:1;
+			}
+			/*bg1*/
+			.bg1{
+				width: 100%;
+				height: 7.04rem;
+				background: url(images/bg1.jpg) no-repeat ;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.bg1 a,.bg1 a img{
+				width: 2.693333rem;
+				height: 0.573333rem;
+				display: block;
+			}
+			.but1-1 {
+				bottom: 0.346666rem;
+				left: 20%;
+			}
+			.but1-2 {
+				bottom: 0.346666rem;
+				right: 20%;
+			}
+			/*bg2*/
+			.bg2{
+				width: 100%;
+				height: 12.426666rem;
+				background: url(images/bg2.jpg) no-repeat ;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.bg2 a ,.bg2 a img{
+				width: 1.84rem;
+				height: 1.826666rem;
+				display: block;
+			}
+			.but2-1{
+				top: 2.093333rem;
+				left: 3.3%;
+			}
+			.but2-2{
+				top: 1.56rem;
+				left: 28%;
+			}
+			.but2-3{
+				top: 1.56rem;
+				right: 28%;
+			}
+			.but2-4{
+				top: 2.093333rem;
+				right: 3.3%;
+			}
+			/*bg3*/
+			.bg3{
+				width: 100%;
+				height: 16.186666rem;
+				background: url(images/bg3.jpg) no-repeat ;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.bg3 a ,.bg3 a img{
+				width: 3.226666rem;
+				height: 0.68rem;
+				display: block;
+			}
+			.but3-1{
+				top: 0rem;
+				left: 50%;
+				margin-left: -1.613333rem;
+			}
+			.but3-2{
+				bottom: 1.013333rem;
+				left: 50%;
+				margin-left: -1.613333rem;
+			}
+			/*bg4*/
+			.bg4{
+				width: 100%;
+				height: 20.226666rem;
+				background: url(images/bg4.jpg) no-repeat ;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.bg4 a ,.bg4 a.but4-1 img{
+				width: 3.226666rem;
+				height: 0.68rem;
+				display: block;
+			}
+			.but4-1{
+				bottom: 8.093333rem;
+				left: 50%;
+				margin-left: -1.613333rem;
+			}
+			form.study{
+				width: 100%;
+				position: absolute;
+				bottom: 1.066666rem;
+			}
+			.studysub{
+				display: block;
+				background: none;
+				border: 0;
+				outline: none;
+				width: 2.6rem;
+				height: 0.68rem;
+				margin: 0 auto;	
+				background: url(images/but4-2.png) no-repeat;
+				background-size: 100% 100%;
+			}
+			.name,.tel{
+				position: relative;
+			}
+			.name input,.tel input{
+				display: block;
+				background:none;  
+				outline:none;  
+				border:0.026666rem solid #ccc;
+				border-radius: 0.053333rem;
+				color: #e5e5e5;
+				font-size: 0.4rem;
+				text-indent: 0.226666rem;
+				width: 4.666666rem;
+				height: 0.733333rem;
+				margin-left: 28.6%;
+				margin-bottom: 0.426666rem;
+			}
+			.name img,.tel img{
+				width: 0.72rem;
+				height: 0.72rem;
+				display: block;
+				position: absolute;
+				left: 1.693333rem;
+				top: 0.026666rem;
+			}
+			/*bg5*/
+			.bg5{
+				width: 100%;
+				height: 25.373333rem;
+				background: url(images/bg5.jpg) no-repeat ;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.bg5 a.but5-1,.bg5 a.but5-1 img{
+				width: 2.24rem;
+				height: 0.6rem;
+				display: block;
+			}
+			.but5-1{
+				top: 5.253333rem;
+				right: 13.5%;
+			}
+			.countdown{
+				font-size: 0.293333rem;
+				color: #383838;
+				font-weight: bold;
+				position: absolute;
+				top: 4.253333rem;
+				right: 7%;
+			}
+			.countdown span{
+				font-size: 0.293333rem;
+				color: #ff1e97;
+				font-weight: bold;
+			}
+			a.but5-2-1,a.but5-2-2,a.but5-2-3,a.but5-2-4,a.but5-2-5,a.but5-2-6,a.but5-2-1 img,a.but5-2-2 img,a.but5-2-3 img,a.but5-2-4 img,a.but5-2-5 img,a.but5-2-6 img{
+				width: 2.573333rem;
+				height: 0.72rem;
+				display: block;
+				right: 5.33%;
+			}
+			a.but5-2-6{
+				bottom: 6.36rem;
+			}
+			a.but5-2-5{
+				bottom: 7.58rem;
+			}
+			a.but5-2-4{
+				bottom: 8.88rem;
+			}
+			a.but5-2-3{
+				bottom: 10.146666rem;
+			}
+			a.but5-2-2{
+				bottom: 11.426666rem;
+			}
+			a.but5-2-1{
+				bottom: 12.706666rem;
+			}
+			.bg5 a.but5-3,.bg5 a.but5-3 img{
+				width: 3.933333rem;
+				height: 0.746666rem;
+				display: block;
+			}
+			a.but5-3{
+				bottom: 4.733333rem;
+				left: 50%;
+				margin-left: -1.966666rem;
+			}
+			/*bg67*/
+			.bg6{
+				width: 100%;
+				height: 14.6rem;
+				background: url(images/bg6.jpg) no-repeat ;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.bg6 a,.bg6 a img{
+				width: 2.466666rem;
+				height: 0.68rem;
+				display: block;
+			}
+			.but6 {
+				bottom: 0.4rem;
+				left: 50%;
+				margin-left: -1.233333rem;
+			}
+			.bg7{
+				width: 100%;
+				height: 11.32rem;
+				background: url(images/bg7.jpg) no-repeat ;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.bg7 a,.bg7 a img{
+				width: 3.453333rem;
+				height: 0.706666rem;
+				display: block;
+			}
+			.but7 {
+				bottom: 3.2rem;
+				left: 50%;
+				margin-left: -1.726666rem;
+			}
+			.rightbox{
+				width: 1.04rem;
+				background: #2489C5;
+				position: absolute;
+				right: 0;
+				top: 0rem;
+				display: none;
+				z-index: 90;
+			}
+			.rightbox .a1,.rightbox .a2,.rightbox .a3{
+				display: block;
+				width: 1.04rem;
+				height: 1.04rem;
+				background: url(images/a1.png) center center no-repeat;
+				background-size: 0.826666rem 0.826666rem;
+			}
+			.rightbox .a2{
+				background: url(images/a2.png) center center no-repeat;
+				background-size: 0.826666rem 0.826666rem;
+			}
+			.rightbox .a3{
+				background: url(images/a3.png) center center no-repeat;
+				background-size: 0.826666rem 0.826666rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="bg1">
+				<a href="javascript:void(0);" class="but1-1">
+					<img src="images/but1-1.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but1-2">
+					<img src="images/but1-2.png"/>
+				</a>
+			</div>
+			<div class="bg2">
+				<a href="javascript:void(0);" class="but2-1">
+					<img src="images/but2-1.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but2-2">
+					<img src="images/but2-2.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but2-3">
+					<img src="images/but2-3.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but2-4">
+					<img src="images/but2-4.png"/>
+				</a>
+			</div>
+			<div class="bg3">
+				<a href="javascript:void(0);" class="but3-1">
+					<img src="images/but3-1.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but3-2">
+					<img src="images/but3-2.png"/>
+				</a>
+			</div>
+			<div class="bg4">
+				<a href="javascript:void(0);" class="but4-1">
+					<img src="images/but4-1.png"/>
+				</a>
+				
+				<div class="defaults_dataid" data-id="0-0-0-2-2-2-1-学历咨询">
+					<form class='study sign-in'>
+						<div class="name">
+							<img src="images/inputlogo1.png"/>
+							<input type="text" class="user-name" placeholder="请输入姓名"/>
+						</div>
+						<div class="tel">
+							<img src="images/inputlogo2.png"/>
+							<input type="text" class="user-con" placeholder="输入联系方式"/>
+						</div>
+						<input type="submit" class="studysub" value=""/>
+					</form>
+				</div>
+				
+			</div>
+			<div class="bg5">
+				<a href="javascript:void(0);" class="but5-1">
+					<img src="images/but5-1.png"/>
+				</a>
+				<div class="countdown">
+					截止时间：<span class="day">00</span><span>天</span><span class="hour">00</span><span>时</span><span class="min">00</span><span>分</span>
+				</div>
+				
+				<a href="javascript:void(0);" class="but5-2-1">
+					<img src="images/but5-2.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but5-2-2">
+					<img src="images/but5-2.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but5-2-3">
+					<img src="images/but5-2.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but5-2-4">
+					<img src="images/but5-2.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but5-2-5">
+					<img src="images/but5-2.png"/>
+				</a>
+				<a href="javascript:void(0);" class="but5-2-6">
+					<img src="images/but5-2.png"/>
+				</a>
+				<a href="javascript:void(0);" onclick="NTKF.im_openInPageChat('kf_9467_1481190298384')" class="but5-3">
+					<img src="images/but5-3.png"/>
+				</a>
+			</div>
+			<div class="bg6">
+				<a href="javascript:void(0);" class="but6">
+					<img src="images/but6.png"/>
+				</a>
+			</div>
+			<div class="bg7">
+				<a href="javascript:void(0);" class="but7">
+					<img src="images/but7.png"/>
+				</a>
+			</div>
+			<div class="rightbox">
+				<a href="javascript:void(0)" class="a1"></a>
+				<a href="javascript:void(0)" class="a2"></a>
+				<a href="javascript:void(0)" class="a3"></a>
+			</div>
+		</div>
+	</body>
+	<script src="js/thea.ms.form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<!--基础脚本加载 -->
+	<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9467" charset="utf-8"></script>
+</html>
