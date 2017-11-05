@@ -16,6 +16,15 @@
 				height: auto;
 				position: relative;
 			}
+			img{
+				pointer-events: none;
+			}
+			.wrap img,.wrap a{
+				-webkit-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    user-select: none;
+			}
 			.bg1 a,.bg2 a,.bg3 a,.bg4 a,.bg5 a,.bg6 a,.bg7 a{
 				position: absolute;
 			}
@@ -336,7 +345,7 @@
 						</div>
 						<div class="tel">
 							<img src="images/inputlogo2.png"/>
-							<input type="text" class="user-con" placeholder="输入联系方式"/>
+							<input type="text" class="user-tel" placeholder="输入联系方式"/>
 						</div>
 						<input type="submit" class="studysub" value=""/>
 					</form>
