@@ -4,7 +4,7 @@ $(function(){
     
     //倒计时
 	var timer = null;
-	countDown(2017,11,4);
+	countDown(2017,11,11);
 	function countDown (y,m,d){
 		timer = setInterval(function(){
 			var now=new Date(),
